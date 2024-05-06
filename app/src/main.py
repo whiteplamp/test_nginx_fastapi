@@ -17,11 +17,3 @@ def get_metrics():
 @app.get('/healthcheck')
 def healthcheck():
     return {"Hello": "world"}
-
-
-@app.get('/loaderio-ec469e1dfeec45c4c99c121fbf333c99')
-def loaderio_test():
-    return """
-    loaderio-ec469e1dfeec45c4c99c121fbf333c99
-
-    """
