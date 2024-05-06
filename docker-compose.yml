@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  fastapi_web:
+    container_name: fastapi_web_development
+    build: .
+    ports:
+      - "80:80"
+    restart: on-failure
+  nginx:
+    container_name: nginx
+    build: .
+    image: nginx:stable-alpine
+    restart: on-failure
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/service.conf
+
