@@ -21,4 +21,7 @@ def healthcheck():
 
 @app.get('/loaderio-ec469e1dfeec45c4c99c121fbf333c99')
 def loaderio_test():
-    return 'loaderio-ec469e1dfeec45c4c99c121fbf333c99'
+    return """
+    loaderio-ec469e1dfeec45c4c99c121fbf333c99
+
+    """
