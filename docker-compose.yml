@@ -8,7 +8,6 @@ services:
     restart: on-failure
   nginx:
     container_name: nginx
-    build: ./nginx
     image: nginx:stable-alpine
     restart: on-failure
 
