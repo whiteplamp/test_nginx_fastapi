@@ -2,13 +2,13 @@ version: '3.9'
 services:
   fastapi_web:
     container_name: fastapi_web_development
-    build: .
+    build: ./app
     ports:
       - "80:80"
     restart: on-failure
   nginx:
     container_name: nginx
-    build: .
+    build: ./nginx
     image: nginx:stable-alpine
     restart: on-failure
 
